@@ -1,0 +1,56 @@
+// C++ code
+//RGB LED Blinking
+
+
+int red=6, blue=4, green=2;
+
+void setup()
+{
+  pinMode(red,OUTPUT);
+  pinMode(blue,OUTPUT);
+  pinMode(green,OUTPUT);
+  
+}
+
+void loop()
+{
+ //rgb_blink();
+  yellow_blink();
+  pink_blink();
+}
+
+void rgb_blink()
+{
+ digitalWrite(red,HIGH);
+ delay(1000);
+ digitalWrite(red,LOW);
+ delay(1000);
+ digitalWrite(blue,HIGH);
+ delay(1000);
+ digitalWrite(blue,LOW);
+ delay(1000); 
+ digitalWrite(green,HIGH);
+ delay(1000);
+ digitalWrite(green,LOW);
+ delay(1000);
+}
+
+void yellow_blink()
+{
+  digitalWrite(green,HIGH);
+  digitalWrite(red,HIGH);
+  delay(1000);
+  digitalWrite(green,LOW);
+  digitalWrite(red,LOW);
+  delay(1000);
+}
+
+void pink_blink()
+{
+  digitalWrite(blue,HIGH);
+  digitalWrite(red,HIGH);
+  delay(1000);
+  digitalWrite(blue,LOW);
+  digitalWrite(red,LOW);
+  delay(1000);
+}
